@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 780px;
+            margin: 0 auto 0;
+            /* 上下，左右 */
+        }
+        
+        #banner {
+            width: 780px;
+            height: 150px;
+            /* 设置的是banner的大小 */
+            background-image: url(./banner1.webp);
+            background-size: 780px 150px;
+            /* 设置的是背景图的大小 */
+        }
+        
+        #globallink {
+            width: 780px;
+            height: 33px;
+            /* 盒子大小 */
+        }
+        
+        #left {
+            width: 200px;
+            height: 561.64px;
+            float: left;
+        }
+        
+        #middle {
+            width: 400px;
+            height: 795.31px;
+            float: left;
+            background-color: #5ea6eb;
+            padding-top: 20px;
+        }
+        
+        #right {
+            width: 180px;
+            height: 561.64px;
+            float: right;
+            background-color: #5ea6eb;
+        }
+        
+        #footer {
+            clear: both;
+            width: 780px;
+            background-color: #5ea6eb;
+            text-align: center;
+            padding: 2px 2px 2px 2px;
+            /* clear:清除浮动，值1：left 效果：清除左侧浮动元素对父元素的影响
+            值2：right  值3：both 值4 none 不清楚浮动元素的影响 */
+        }
+        
+        #globallink ul {
+            list-style: none;
+            /* 去掉globallink列表前 的项目符号 */
+        }
+        
+        #globallink ul li {
+            float: left;
+            /* 让导航水平放置 */
+        }
+        
+        #globallink ul li a:hover {
+            color: coral;
+        }
+        
+        #globallink ul li {
+            float: left;
+            padding: 0px 5px;
+            color: #006;
+            /* “padding在html中是内边距的意思。这是一个设置内边距的简写属性,可以定义元素边框与元素内容之间的空间,即上下左右的内边距。
+            与margin的区别：
+            m是盒子与盒子的距离
+            p是盒子与内容的距离 */
+        }
+        
+        #globallink {
+            background-image: url(./button.webp);
+            background-size: 780px 33px;
+        }
+        
+        a {
+            text-decoration: none;
+            /* 去掉超链接的下划线 */
+        }
+        
+        #today {
+            width: 200px;
+            height: 561.64px;
+            margin: 0px auto;
+            padding: 0px 0px 10px 10px;
+            /* 上右下左 */
+            text-align: center;
+            background-color: #5ea6eb;
+        }
+        
+        #today ul {
+            list-style: none;
+            margin: 0px;
+            /* margin，是CSS语法，这个简写属性用于在一个声明中设置所有当前或者指定元素所有外边距的宽度，或者设置各边上外边距的宽度。上-右-下-左” */
+        }
+        
+        #today img {
+            width: 120px;
+            height: 120px;
+        }
+        
+        #today ul {
+            width: 200px;
+            padding-left: 8px;
+            list-style: none;
+            /*list-style设置li列表前面的样式  */
+            /* 左边栏today盒子中高度间距 */
+        }
+        
+        #beauty {
+            background: white;
+            width: 400px;
+            height: 485px;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #fff;
+        }
+        
+        #route {
+            background: white;
+            width: 400px;
+            height: 485px;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #fff;
+        }
+        
+        #route ul {
+            list-style: none;
+            margin: 0px
+        }
+        
+        #route ul li {
+            padding: 8px 0px 0px 30px;
+        }
+        
+        #beauty ul li img {
+            width: 80px;
+            height: 80px;
+            float: left;
+            border: 1px solid white;
+        }
+        
+        #beauty ul {
+            list-style: none;
+        }
+        
+        #food ul li {
+            padding-left: 15px;
+            padding-bottom: 8px;
+            /* 文字边距 */
+            border-bottom: 1px #CCC dashed;
+            /* 为右侧栏列表设置虚下划线 */
+            /* 同时设置上下左右边框：
+
+  border: 宽度 样式 颜色;    其中颜色可以省略（默认黑色），样式不能省略
+
+分别设置上右下左边框（1）
+
+                border-top: 宽度 样式 颜色;（顶部）
+                border-right:宽度 样式 颜色 ;（右边）
+                border-bottom:宽度 样式 颜色 ;（下边）
+                border-left: 宽度 样式 颜色;（左边）
+
+分别设置上右下左边框（2），如果省略左则和对边（右）格式相同，如果省略下则和对边（上）格式相同，如果省略右，下，左则和 上 格式相同，
+
+                border-width:上 右 下 左;
+                border-style: 上 右 下 左;
+                border-color: 上 右 下 左;
+
+分别设置上右下左边框（3）
+
+                border-top-width:2px ;
+                border-top-style: solid;
+                border-bottom-color:blue ; */
+        }
+        
+        #life ul li {
+            padding-left: 15px;
+            padding-bottom: 8px;
+            /* 文字边距 */
+            border-bottom: 1px #CCC dashed;
+            /* 为右侧栏列表设置虚下划线 */
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="banner">新疆行知书</div>
+        <div id="globallink">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">新疆简介</a></li>
+                <li><a href="#">风土人情</a></li>
+                <li><a href="#">吃在新疆</a></li>
+                <li><a href="#">路线选择</a></li>
+                <li><a href="#">自主行</a></li>
+                <li><a href="#">摄影摄像</a></li>
+                <li><a href="#">游记精选</a></li>
+                <li><a href="#">资源下载</a></li>
+                <li><a href="#">雁过留声</a></li>
+            </ul>
+        </div>
+        <div id="left">
+            <div id="today">
+                <h3><span>今日推荐</span></h3>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./left.webp" alt="" id="lefta"></a>
+                    </li>
+                    <br><a href="#" id="left">喀纳斯河</a>
+                    <li>
+                        <a href="#"><img src="./left22.webp" alt="" id="left"></a>
+                    </li>
+                    <br><a href="#" id="left">布尔津</a>
+                    <li>
+                        <a href="#"><img src="./left33.webp" alt="" id="left"> </a>
+                    </li>
+                    <br><a href="#" id="left">天山之路</a>
+                </ul>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="beauty">
+                <h3>美景寻踪</h3>
+                <ul>
+                    <li><img src="./middle1.webp" alt=""></li>
+                    <li><img src="./middle2.webp" alt=""></li>
+                    <li><img src="./middle3.webp" alt=""></li>
+                    <li><img src="./middle4.webp" alt=""></li>
+                </ul>
+
+            </div>
+            <div id=" route">
+                <h3>线路精选</h3>
+                <li><a href="#">吐鲁番-库勒尔</a></li>
+                <li><a href="#">乌鲁木齐-天池</a></li>
+                <li><a href="#">乌鲁木齐-奎齐</a></li>
+                <li><a href="#">乌鲁木齐-五彩城</a></li>
+
+            </div>
+
+
+
+
+        </div>
+        <div id="right">
+            <div id="food">
+                <div>小吃推荐</div>
+                <ul>
+                    <li>抓饭</li>
+                    <li>大盘鸡</li>
+                    <li>五一夜市</li>
+                    <li>水果</li>
+                </ul>
+            </div>
+            <div id="life">
+                <div>宾馆酒店</div>
+                <ul>
+                    <li>美丽大饭店</li>
+                    <li>海德大饭店</li>
+                    <li>银都大饭店</li>
+                    <li>洪福大饭店</li>
+                    <li>友好大饭店</li>
+                    <li>棉麻宾馆</li>
+                </ul>
+
+            </div>
+
+
+        </div>
+        <div id="footer">
+            <p>畅游天下工作室Copyright;版权所有</p>
+            <a href="#">freetravelling@demo.com</a>
+        </div>
+    </div>
+</body>
+
+</html>

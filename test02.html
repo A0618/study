@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+
+      margin: 0;
+      background:linear-gradient(to right, #4ca1af, #c4e0e5);
+      font-family: Arial;
+    }
+
+    .login-box {
+      width: 300px;
+      padding: 20px;
+      margin: auto;
+      margin-top: 2000px;
+      text-align: center;
+      background: white;
+      border-radius: 5px; 
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body id="bgc">
+  <div class="login-box">
+    <h2>登录</h2>
+    <form>
+      <input type="text" placeholder="用户名" name="username" required>
+      <input type="password" placeholder="密码" name="password" required>
+      <input type="submit" value="登录">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: 0 auto;
+            width: 780px;
+            height: 780px;
+        }
+        
+        #banner {
+            width: 780px;
+            height: 150px;
+            background-color: #006;
+        }
+        
+        #globallink {
+            width: 780px;
+            height: 33px;
+            background-color: cornflowerblue;
+        }
+        
+        #left {
+            background-color: aqua;
+            width: 200px;
+            height: 561px;
+            float: left;
+        }
+        
+        #middle {
+            background-color: pink;
+            width: 360px;
+            height: 791px;
+            float: left;
+        }
+        
+        #right {
+            background-color: purple;
+            width: 200px;
+            height: 561px;
+            float: right;
+        }
+        
+        #today ul li {
+            list-style: none;
+        }
+        
+        #today img {
+            width: 130px;
+            height: 130px;
+        }
+        
+        #footer {
+            clear: both;
+            background-color: blueviolet;
+            width: 780px;
+            height: 100px;
+        }
+        
+        #globallink ul li {
+            list-style: none;
+            float: left;
+            padding: 4px 5px;
+            color: #006;
+        }
+        
+        #beauty {
+            background: white;
+            width: 365px;
+            height: 350px;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #fff;
+        }
+        
+        #beauty ul li {
+            list-style: none;
+            color: white;
+        }
+        
+        #beauty ul li img {
+            width: 75px;
+            height: 150px;
+            float: left;
+        }
+        
+        #route {
+            width: 360px;
+            clear: left;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        #footer {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        #globallink ul {
+            margin: 0 auto;
+            /* 解决两个div之间有空隙的问题，因为其中一个设置了ul,具体原因有待查找 */
+        }
+        
+        span {
+            font-size: 12px;
+            color: #039;
+            background: #DDEBFF;
+            display: block;
+            padding: 5px 0px 5px 20px;
+            text-align: left;
+        }
+        
+        #food ul li {
+            padding-left: 15px;
+            padding-bottom: 8px;
+            /* 文字边距 */
+            border-bottom: 1px #CCC dashed;
+        }
+        
+        #life ul li {
+            padding-left: 15px;
+            padding-bottom: 8px;
+            /* 文字边距 */
+            border-bottom: 1px #CCC dashed;
+            /* 为右侧栏列表设置虚下划线 */
+        }
+        
+        footer ul li a:hover {
+            color: white;
+        }
+        
+        a:hover {
+            color: greenyellow;
+        }
+        
+        #beauty1 {
+            font-size: 20px;
+            color: #039;
+            display: block;
+            padding: 5px 0px 5px 20px;
+            text-align: left;
+        }
+        
+        #beauty1 img {
+            width: 25px;
+            height: 25px;
+        }
+        
+        #route1 {
+            font-size: 20px;
+            color: #039;
+            display: block;
+            padding: 5px 0px 5px 20px;
+            text-align: left;
+        }
+        
+        #route1 img {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="banner"></div>
+        <!--  -->
+        <div id="globallink">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">新疆简介</a></li>
+                <li><a href="#">风土人情</a></li>
+                <li><a href="#">吃在新疆</a></li>
+                <li><a href="#">路线选择</a></li>
+                <li><a href="#">自主行</a></li>
+                <li><a href="#">摄影摄像</a></li>
+                <li><a href="#">游记精选</a></li>
+                <li><a href="#">资源下载</a></li>
+                <li><a href="#">雁过留声</a></li>
+            </ul>
+        </div>
+        <div id="left">
+            <div id="today">
+                <div><span>☰今日推荐</span></div>
+                <ul>
+                    <li><img src="./left1.webp" alt=""></li>
+                    <li><a href="#">乌鲁木齐</a></li>
+                    <li><img src="./left22.webp" alt=""></li>
+                    <li><a href="#">五彩城</a></li>
+                    <li><img src="./left33.webp" alt=""></li>
+                    <li><a href="#">阿萨</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div id="right">
+            <div id="food">
+                <div><span>☰小吃推荐</span></div>
+                <ul>
+                    <li><a href="#">抓饭</a></li>
+                    <li><a href="#">大盘鸡</a></li>
+                    <li><a href="#">五一夜市</a></li>
+                    <li><a href="#">水果</a></li>
+                </ul>
+            </div>
+            <div id="life">
+                <div><span>☰宾馆酒店</span></div>
+                <ul>
+                    <li><a href="#">美丽大饭店</a></li>
+                    <li><a href="#">海德大饭店</a></li>
+                    <li><a href="#">洪福大饭店</a></li>
+                    <li><a href="#">友好大饭店</a></li>
+                    <li><a href="#">棉麻宾馆</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="middle">
+            <div id="beauty">
+                <div id="beauty1" style="font-family: 宋体;"><img src="./icon.jpg" alt="">美景寻踪</div>
+                <ul>
+                    <li><img src="./middle1.webp" alt=""></li>
+                    <li><img src="./middle2.webp" alt=""></li>
+                    <li><img src="./middle3.webp" alt=""></li>
+                    <li><img src="./middle4.webp" alt=""></li>
+                </ul>
+
+            </div>
+            <div></div>
+            <div id=" route">
+                <div id="route1" style="font-family: 宋体;"><img src="./icon.jpg" alt="">线路精选</div>
+                <ul style="list-style: none;">
+                    <li style="line-height: 35px;"><a href="#">∷ 吐鲁番-库勒尔</a></li>
+                    <li style="line-height: 35px;"><a href="#">∷ 乌鲁木齐-天池</a></li>
+                    <li style="line-height: 35px;"><a href="#">∷ 乌鲁木齐-奎齐</a></li>
+                    <li style="line-height: 35px;"><a href="#">∷ 乌鲁木齐-五彩城</a></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+        <div id="footer">
+            <p>畅游天下工作室Copyright;版权所有</p>
+            <a href="#">freetravelling@demo.com</a>
+        </div>
+    </div>
+    <!-- 块级元素和行内(内联)元素
+    区别就是块级元素会从上到下一个个垂直排列，每个自占一行
+行内元素在一行中水平排列，行内元素的高度由其内容撑开，不可显示的设置其高度，这就是为什么我们一次次的在span上设置height属性不好使的原因。 -->
+</body>
+
+</html>

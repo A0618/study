@@ -1,0 +1,339 @@
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 快捷导航栏开始 */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+    line-height: 52px;
+}
+.s {
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+.shortcut ul {
+    float: right;
+}
+
+.shortcut li {
+    float: left;
+}
+
+.shortcut li:nth-child(13)::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 16px;
+    margin-right: 5px;
+    background-color: #27ba9b;
+    background: url(../images/sprites.png) no-repeat -160px -70px;
+}
+
+.sep {
+    color: #666;
+    margin: 0 15px;
+}
+
+.shortcut li a {
+    color: #dcdcdc;
+    font-size: 14px;
+}
+
+.shortcut li a:hover {
+    color: #27ba9b;
+}
+
+/* 快捷导航栏结束 */
+/* 主导航栏开始 */
+.main_nav {
+    height: 130px;
+    padding: 30px 0;
+
+}
+
+.logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+
+}
+
+.logo h1 a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    font-size: 0;
+    background: url(.././images/logo.png) no-repeat;
+    background-size: 100%;
+}
+
+.nav {
+    float: left;
+    margin-top: 5px;
+    margin-left: 35px;
+}
+
+.nav ul li {
+    float: left;
+    margin: 24px;
+}
+
+.nav ul li a {
+    padding-bottom: 5px;
+}
+
+.nav ul li:hover a {
+    border-bottom: 1px solid #27ba9b;
+    color: #27ba9b;
+}
+
+.search {
+    float: left;
+    margin-left: 35px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.search::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    width: 18px;
+    height: 22px;
+    background: url(.././images/sprites.png) no-repeat -79px -69px;
+}
+
+.search input {
+    width: 172px;
+    height: 30px;
+    margin-top: 26px;
+    padding-left: 30px;
+
+}
+
+.search input::placeholder {
+    color: #ccc;
+}
+
+.car {
+    position: relative;
+    float: left;
+    width: 23px;
+    height: 23px;
+    background-color: #27ba9b;
+    margin-top: 30px;
+    margin-left: 15px;
+    background: url(.././images/sprites.png) no-repeat -119px -70px;
+}
+
+.car span {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-size: 13px;
+    line-height: 14px;
+    padding: 0 5px;
+    background-color: #e26237;
+    border-radius: 7px;
+    color: #fff;
+}
+
+/* 主导航栏结束 */
+/* 底部模块开始 */
+footer {
+    height: 645px;
+}
+
+.ft {
+    height: 50%;
+}
+
+.ft dl {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-top: 79px;
+    color: #999;
+}
+
+.ft dl dt {
+    margin-bottom: 30px;
+}
+
+.kefu dd,
+.guanzhu dd {
+    display: inline-block;
+    vertical-align: middle;
+    width: 92px;
+    height: 92px;
+    border: 1px solid #eee;
+    margin-right: 5px;
+
+}
+
+.kefu dd a,
+.guanzhu dd a {
+    display: block;
+    margin-top: 22px;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #999;
+}
+
+.kefu dd a::before,
+.guanzhu dd a::before {
+    display: block;
+    width: 35px;
+    height: 31px;
+    content: '';
+    margin: 0 auto;
+    padding-bottom: 5px;
+    background: url(../images/sprites.png) no-repeat;
+    transition: all .5s;
+}
+
+.kefu .zaixian a::before {
+    background-position: -250px -70px;
+}
+
+.kefu .zaixian a:hover::before {
+    background-position: -204px -70px;
+}
+
+.kefu .wenti a::before {
+    background-position: -350px -70px;
+}
+
+.kefu .wenti a:hover::before {
+    background-position: -300px -70px;
+}
+
+.guanzhu .gongzhong a::before {
+    background-position: -250px -15px;
+}
+
+.guanzhu .gongzhong a:hover::before {
+    background-position: -205px -15px;
+}
+
+.guanzhu .weibo a::before {
+    background-position: -350px -15px;
+}
+
+.guanzhu .weibo a:hover::before {
+    background-position: -300px -15px;
+}
+
+
+
+.xiazai dd {
+    width: 105px;
+    height: 103px;
+    display: inline-block;
+
+}
+
+.xiazai dd a {
+    color: #999;
+    font-size: 14px;
+}
+
+.xiazai dd button {
+    width: 107px;
+    height: 32px;
+    background-color: #27ba9b;
+    color: #FFF;
+    margin-top: 10PX;
+    border: none;
+    cursor: pointer;
+}
+
+.xiazai dd img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-top: -60px;
+}
+
+.ft .rexian dt {
+    margin-bottom: 40px;
+}
+
+.rexian dd:nth-of-type(1) {
+    font-size: 22px;
+}
+
+.rexian dd:nth-of-type(2) {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.fb {
+    height: 50%;
+    background-color: #333;
+}
+
+.fb .fb_t {
+    height: 170px;
+    line-height: 175px;
+    width: 1393px;
+    margin: 0 auto 40px;
+    border-bottom: 1px solid #434343;
+    text-align: center;
+}
+
+.fb .fb_t ul li {
+    float: left;
+    width: 33.33%;
+    color: #fff;
+    font-size: 28px;
+}
+
+.fb .fb_t ul li::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 58px;
+    height: 58px;
+    background: url(../images/sprites.png) no-repeat;
+}
+
+.fb .fb_t ul li:nth-child(2):before {
+    background-position: -65px 0;
+}
+
+.fb .fb_t ul li:nth-child(2):before {
+    background-position: -130px 0;
+}
+
+.fb .fb_b {
+    text-align: center;
+    color: #999;
+}
+
+.fb .fb_b i {
+    padding: 0 4px;
+}
+
+.fb .fb_b p a {
+    color: #999;
+    font-size: 14px;
+
+}
+
+.fb .fb_b p a:hover {
+    color: #27ba9b;
+}
+
+.fb .fb_b p:nth-child(2) {
+    margin-top: 5px;
+}
+
+/* 底部模块结束 */

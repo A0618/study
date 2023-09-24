@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* 盒子内减 */
+            box-sizing: border-box;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .father ul li {
+            float: left;
+            padding: 0 20px;
+            border-top: 1px black solid;
+            border-bottom: 1px black solid;
+            border-left: 1px black solid;
+            height: 60px;
+            line-height: 60px;
+            font-size: 14px;
+        }
+        
+        a {
+            position: relative;
+        }
+        
+        .code {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 60px;
+            display: none;
+        }
+        
+        a:hover img {
+            /*  */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <ul>
+            <li>我要投资</li>
+            <li>平台介绍</li>
+            <li>新手专区</li>
+            <li><a href="#">手机为紧缩<img src="./6023c9690c18b1c580db49f18ee3f06c2f66c140_6023c9691355d275e56e428fbd39a657fc055d32.jpg" alt="" class="code"></a></li>
+            <li>个人中心</li>
+        </ul>
+    </div>
+</body>
+
+</html>

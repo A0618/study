@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            margin: 0 auto;
+            width: 1000px;
+            /* height: 300px; */
+            background-color: pink;
+        }
+        
+        .bttom {
+            height: 100px;
+            background-color: green;
+        }
+        
+        .left {
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        
+        .right {
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: blue;
+        }
+        
+        .clearfix::after {
+            content: '';
+            /* 没有这个伪元素不生效 */
+            display: block;
+            /* 而且得是块标签 */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+
+    </div>
+    <div class="bttom"></div>
+</body>
+
+</html>

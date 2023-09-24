@@ -1,0 +1,272 @@
+/* Index页面的样式表 */
+
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+
+
+/* 测导航 */
+
+.banner .aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside a {
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    padding-right: 19px;
+    width: 250px;
+    height: 50px;
+    color: #fff;
+}
+
+.banner .aside a span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover {
+    background-color: #27ba9b;
+}
+
+
+/* a的里面最后一个位置添加箭头 */
+
+.banner .aside a::after {
+    content: '';
+    /* 伪元素行内显示模式，要转变显示模式 */
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    width: 6px;
+    height: 11px;
+    background-image: url(../image/sprites.png);
+    background-position: -80px -110px;
+}
+
+
+/* 箭头 */
+
+.prev,
+.next {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    background-image: url(../image/sprites.png);
+}
+
+
+/* 背景图位置负责2件事，改变兼有在盒子的位置，改变精灵图的位置 */
+
+
+/* 导致精灵图测量不准确 */
+
+
+/* 可用标签 */
+
+.prev {
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.next {
+    right: 10px;
+    background-position: -22px -60px;
+}
+
+
+/* 圆点 */
+
+.banner ol {
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+    height: 10px;
+    width: 200px;
+}
+
+.banner ol li {
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.banner ol .current {
+    background-color: #fff;
+}
+
+
+/* 新鲜好物 */
+
+.goods .hd {
+    height: 114px;
+    line-height: 114px;
+}
+
+.goods .hd h2 {
+    font-size: 29px;
+    float: left;
+    font-weight: 400;
+    height: 114px;
+}
+
+.goods .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a,
+.shengxian .hd .more {
+    float: right;
+    color: #999;
+}
+
+.goods .hd a::after,
+.shengxian .hd .more::after {
+    content: '';
+    margin-left: 10px;
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    background-image: url(../image/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+
+.goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .bd li:last-child {
+    margin-right: 0;
+}
+
+.goods .bd li img {
+    width: 304px;
+    /* 图片给一个宽、高，另一个等比例缩放 */
+}
+
+.goods .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.goods .bd li div {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.goods .bd li div span {
+    font-size: 23px;
+}
+
+.goods .bd li b {
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.shengxian .hd {
+    height: 96px;
+}
+
+.shengxian .hd h2 {
+    float: left;
+    height: 96px;
+    line-height: 96px;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.shengxian .hd .more {
+    float: right;
+    height: 96px;
+    display: block;
+    line-height: 96px;
+}
+
+.shengxian .hd ul {
+    float: right;
+    height: 96px;
+    display: block;
+    line-height: 96px;
+    margin-right: 65px;
+}
+
+.shengxian .hd ul li {
+    float: left;
+}
+
+.shengxian .hd li a {
+    padding: 2px 7px;
+    margin-right: 6px;
+}
+
+.shengxian .hd li a:hover {
+    background-color: #27ba9b;
+    color: #fff;
+}
+
+.shengxian .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: pink;
+}
+
+.shengxian .bd .right {
+    float: right;
+    width: 1000px;
+    height: 610px;
+    background-color: skyblue;
+}
+.shengxian .bd .right ul{
+    width: 1000px;
+    height: 610px;
+
+}
+.shengxian .bd .right ul li{
+    
+}

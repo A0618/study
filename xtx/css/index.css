@@ -1,0 +1,733 @@
+/* 页面滚动
+ */
+ html {
+    scroll-behavior: smooth;
+ }
+.sk {
+    /* position: sticky; */
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.section {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.section .w {
+    position: relative;
+}
+
+.focus {
+    height: 540px;
+    width: 1240px;
+    overflow: hidden;
+}
+
+.focus img {
+    height: 540px;
+    width: 1240px;
+}
+
+.carousel {
+    position: relative;
+    width: 700%;
+}
+
+.carousel li {
+    float: left;
+}
+
+.prve,
+.next {
+    display: none;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .2) url(../images/sprites.png) no-repeat;
+}
+
+.prve:hover,
+.next:hover {
+    background: rgba(0, 0, 0, .4) url(../images/sprites.png) no-repeat;
+}
+
+.prve:hover {
+    background-position: 14px -60px;
+}
+
+.next:hover {
+    background-position: -22px -60px;
+}
+
+.prve {
+    position: absolute;
+    top: 50%;
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    background-position: -22px -60px;
+}
+
+.dots {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: 65px;
+}
+
+.dots .active {
+    background-color: red;
+}
+
+.dots li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 251px;
+    height: 540px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.aside ul li {
+    position: relative;
+    height: 54px;
+    line-height: 54px;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 36px;
+    transition: all .3s;
+}
+
+.aside ul li::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all .3s;
+    width: 6px;
+    height: 6px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    transform: rotate(-45deg);
+    border-color: transparent white white transparent;
+}
+
+.aside ul li:hover {
+    padding-left: 60px;
+    background-color: #27ba9b;
+}
+
+.aside ul li:hover::after {
+    transform: rotate(135deg);
+}
+
+.aside ul li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.aside ul li a:first-child {
+    margin-left: 15px;
+}
+
+/* 新鲜好物模块开始 */
+.goods_hd {
+    margin-top: 20px;
+    height: 113px;
+    line-height: 113px;
+}
+
+.goods_hd h3 {
+    float: left;
+    height: 113px;
+    font-size: 29px;
+    color: #333;
+    font-weight: 400;
+
+}
+
+.goods_hd h3 span {
+    margin-left: 10px;
+}
+
+.goods_hd h3 span,
+.goods_hd a {
+    font-size: 16px;
+    color: #999;
+}
+
+.goods_hd a {
+    float: right;
+}
+
+.goods_hd a:hover {
+    color: #27ba9b;
+}
+
+.goods_hd a:hover::after {
+    border-color: transparent #27ba9b #27ba9b transparent;
+}
+
+.goods_hd a::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    transform: rotate(-45deg);
+    border-color: transparent #999 #999 transparent;
+}
+
+.goods_bm {
+    height: 406px;
+}
+
+.goods_bm li {
+    position: relative;
+    margin-right: 6px;
+    text-align: center;
+    width: 305px;
+    height: 406px;
+    float: left;
+    background-color: #f0f9f4;
+    transition: all .5s;
+}
+
+.goods_bm li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
+}
+
+.goods_bm li:nth-child(4) {
+    margin-right: 0;
+}
+
+.goods_bm li i {
+    position: absolute;
+    top: 18px;
+    left: 17px;
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 5px;
+    width: 28px;
+    height: 51px;
+    color: #27ba9b;
+    border: 2px solid #27ba9b;
+    border-radius: 5px;
+}
+
+.goods_bm li img {
+    width: 304px;
+    height: 305px;
+}
+
+.goods_bm li a p:nth-of-type(1) {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.goods_bm li a p:nth-of-type(1):hover {
+    color: #27ba9b;
+}
+
+.goods_bm li a p:nth-of-type(2) {
+    font-size: 23px;
+    color: #9a2e1f;
+}
+
+.renqi .goods_bm li a p:nth-of-type(1) {
+    font-size: 21px;
+}
+
+.renqi .goods_bm li a p:nth-of-type(2) {
+    font-size: 16px;
+    color: #999;
+}
+
+.renqi .goods_bm li {
+    background-color: #fff;
+}
+
+/* 新鲜好物模块结束 */
+/* 热门品牌开始 */
+.pinpai {
+    height: 466px;
+    background-color: #f5f5f5;
+}
+
+.goods_hd .button {
+    float: right;
+    width: 52px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 79px;
+
+}
+
+.button i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #e2e2e2;
+    text-align: center;
+}
+
+.button span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-color: transparent white white transparent;
+}
+
+.button i:hover {
+    background-color: #27ba9b;
+}
+
+.button .left {
+    transform: rotate(135deg);
+    margin-left: 5px;
+}
+
+.button .right {
+    transform: rotate(-45deg);
+    margin-right: 5px;
+}
+
+.goodss_bm {
+    height: 306px;
+}
+
+.goodss_bm ul li {
+    float: left;
+    width: 244px;
+    margin-right: 5px;
+    transition: all .5s;
+}
+
+.goodss_bm ul li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .5);
+}
+
+.goodss_bm ul li:nth-child(5) {
+    margin-right: 0;
+}
+
+.goodss_bm img {
+    width: 244px;
+    height: 306px;
+}
+
+/* 热门品牌结束*/
+/* 生鲜模块开始 */
+.tab {
+    float: right;
+    margin-right: 65px;
+    text-align: center;
+}
+
+.tab li {
+    display: inline-block;
+    width: 48px;
+    line-height: 20px;
+    color: #333;
+    margin-right: 13px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tab li:hover {
+    background-color: #27ba9b;
+}
+
+.active {
+    display: inline-block;
+    width: 48px;
+}
+
+.goods_bottom {
+    height: 611px;
+}
+
+.goods_bottom_left {
+    float: left;
+    height: 100%;
+    width: 240px;
+}
+
+.goods_bottom_left img {
+    height: 611px;
+    width: 240px;
+}
+
+.goods_bottom_right {
+    float: right;
+    width: 1000px;
+    height: 100%;
+}
+
+.goods_bottom_right ul li {
+    position: relative;
+    float: left;
+    margin: 0 0 3px 8px;
+    width: 242px;
+    height: 304px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.goods_bottom_right ul li:hover {
+    border: 2px solid #27ba9b;
+}
+
+
+
+.goods_bottom_right ul li img {
+    display: block;
+    width: 184px;
+    height: 184px;
+    margin: 0 auto;
+}
+
+.goods_bottom_right ul li P {
+    margin-left: 29px;
+    width: 182px;
+}
+
+.goods_bottom_right ul li P:nth-of-type(1) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.goods_bottom_right ul li P:nth-of-type(2) {
+    color: #9a2e1f;
+}
+
+.goods_bottom_right ul li P:nth-of-type(2) em {
+    font-size: 22px;
+}
+
+.baby {
+    position: absolute;
+    left: -2px;
+    bottom: -84px;
+    width: 242px;
+    height: 84px;
+    background-color: #27ba9b;
+    color: #fff;
+    text-align: center;
+    transition: all .5s;
+}
+
+.goods_bottom_right ul li:hover .baby {
+    bottom: 0;
+}
+
+.baby span:nth-child(1) {
+    display: inline-block;
+    width: 125px;
+    height: 35px;
+    border-bottom: 1px solid #a9dbcc;
+    margin: 10px auto 8px;
+}
+
+.baby span:nth-child(2) {
+    display: block;
+}
+
+/* 生鲜模块结束 */
+/* 最新模块开始 */
+.news {
+    height: 512px;
+    background-color: #f5f5f5;
+}
+
+.news_bt ul li {
+    width: 404px;
+    height: 356px;
+    float: left;
+    margin-right: 9px;
+}
+
+.news_bt ul li img {
+    width: 404px;
+    height: 288px;
+}
+
+.news_bt ul li:nth-child(3) {
+    margin-right: 0;
+}
+
+.news_bt ul li div:nth-child(1) {
+    position: relative;
+    width: 404px;
+    height: 288px;
+    background-color: #9a2e1f;
+}
+
+.news_bt ul li .cook {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 288px;
+}
+
+.news_bt ul li .cook p {
+    color: #999;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.news_bt ul li .cook span {
+    position: absolute;
+    top: 20px;
+    right: -100px;
+    width: 81px;
+    height: 27px;
+    background-color: #fff;
+    color: #9a2e1f;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.news_bt ul li .cook p:nth-child(1) {
+    font-size: 20px;
+}
+
+.news_bt ul li .nnn {
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    background-color: #fff;
+}
+
+.news_bt ul li div:nth-child(2) i:nth-child(1) {
+    margin-left: 20px;
+    float: left;
+}
+
+.news_bt ul li div:nth-child(2) i:nth-child(2) {
+    float: left;
+    margin-left: 30px;
+}
+
+.news_bt ul li div:nth-child(2) i:nth-child(3) {
+    float: right;
+    margin-right: 20px;
+}
+
+.news_bt ul li div:nth-child(2) i::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: url(../images/sprites.png) no-repeat -120px -110px;
+}
+
+.news_bt ul li div:nth-child(2) i:nth-child(2):before {
+    background-position: -160px -110px;
+}
+
+.news_bt ul li div:nth-child(2) i:nth-child(3):before {
+    background-position: -200px -110px;
+}
+
+/* 最新模块结束 */
+/* 电梯导航 */
+
+.xtx-elevator {
+    position: fixed;
+    left: 50%;
+    top: 280px;
+    z-index: 999;
+    margin-left: 640px;
+    opacity: 0;
+    transition: all .5s;
+    font-size: 14px;
+}
+
+.xtx-elevator .xtx-elevator-list {
+    width: 70px;
+    height: 300px;
+    background: #fff;
+    float: right;
+    border: 1px solid #f5f5f5;
+    position: relative;
+
+}
+
+.xtx-elevator .xtx-elevator-list li {
+    height: 60px;
+    padding: 15px;
+}
+
+.xtx-elevator .xtx-elevator-list li a {
+    width: 40px;
+    height: 30px;
+    display: block;
+    text-align: center;
+
+}
+
+.xtx-elevator .xtx-elevator-list li a:hover,
+.xtx-elevator .xtx-elevator-list li a.active {
+    color: #27BA9B;
+}
+
+.xtx-elevator .xtx-elevator-list li a i {
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    left: 13px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    background-position: 8px -106px;
+    font-size: 20px;
+    transform: rotate(45deg);
+}
+
+.xtx-elevator .xtx-elevator-list li a:hover i {
+    border-left: 1px solid #27BA9B;
+    border-top: 1px solid #27BA9B;
+}
+
+/* <!-- 页面滚动出现主导航栏 --> */
+.scroll {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #27BA9B;
+    background-color: #fff;
+    margin-top: -130px;
+    transition: all .5s;
+    height: 52px;
+    line-height: 52px;
+}
+.scroll .logo h1 a {
+    display: block;
+    width: 100px;
+    position: absolute;
+    top: 10px;
+}
+.scroll  .main_nav {
+    position: relative;
+}
+.scroll .search {
+    position: absolute;
+    right: 0;
+    top:-15px;
+    height: 30px;
+}
+
+.scroll .search input {
+    border: 1px solid #27BA9B;
+    width: 600px;
+}
+/* 推荐模块start */
+.recomment {
+    position: relative;
+    height: 165px;
+    /* background-color: pink; */
+}
+
+.recomment_today {
+    position: relative;
+    float: left;
+    width: 251px;
+    height: 100%;
+    line-height: 165px;
+    /* background: url(../images/countDown.png) center; */
+    background-color: #0a9e87;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.recomment_today i {
+    position: absolute;
+    top: -35px;
+    left: 50px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+.recomment_today .ems {
+    position: absolute;
+    top:12px;
+    left: 36px;
+}
+.recomment_today span {
+    margin-top: 118px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #333;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+}
+
+.recomment_today:hover {
+    box-shadow: 0 10px 10px #ccc;
+
+}
+
+.recomment_today em {
+    font-size: 20px;
+    margin-left: 2px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.commodity {
+    height: 165px;
+    background-color: #ebebeb;
+}
+
+.commodity ul li {
+    float: left;
+    width: 247px;
+    height: 165px;
+    line-height: 165px;
+    text-align: center;
+    transition: all .5s linear;
+}
+
+.commodity ul li:hover {
+    box-shadow: 0 10px 20px #ccc;
+}
+
+/* 推荐模块ent */

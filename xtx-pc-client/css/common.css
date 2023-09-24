@@ -1,0 +1,245 @@
+/* 各个页面相同的样式表：头，尾 */
+
+
+/* 版心 */
+
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+
+/* 快捷导航 */
+
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut .wrapper {
+    height: 52px;
+}
+
+.shortcut .wrapper ul {
+    float: right;
+}
+
+.shortcut .wrapper ul li {
+    float: right;
+    /* 小li文字居中 */
+    line-height: 52px;
+}
+
+.shortcut .wrapper a {
+    padding: 0 16px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+/* 去掉快捷导航小li 的最右边的小竖线 */
+.shortcut .wrapper ul li:nth-child(1) a {
+    border-right: none;
+}
+
+.shortcut .wrapper a span {
+    display: inline-block;
+    /* 小手机图形和文字有间距 */
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    background-image: url(../image/sprites.png);
+    background-position: -160px -70px;
+    vertical-align: middle;
+}
+
+
+/* 头部 */
+
+.header {
+    /* 上下留白，也可以用padding */
+    margin: 30px auto;
+    height: 70px;
+}
+
+.logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+}
+
+
+/* Logo的引擎优化做法 */
+
+.logo a {
+    /* 不能设置为inline -block,会导致li撑开 */
+    display: block;
+    background-size: contain;
+    width: 207px;
+    height: 70px;
+    background-image: url(../image/logo.png);
+    /* 让logo的文看不见 */
+    font-size: 0;
+}
+
+.nav {
+    margin-left: 40px;
+    float: left;
+    height: 70px;
+}
+
+.nav li {
+    float: left;
+    margin-right: 40px;
+    line-height: 70px;
+}
+
+.nav a {
+    padding-bottom: 7px;
+}
+
+.nav li a:hover {
+    color: #27ba9b;
+    border-bottom: 1px solid #27ba9b;
+}
+
+.search {
+    position: relative;
+    float: left;
+    margin-top: 24px;
+    margin-left: 34px;
+    width: 172px;
+    height: 30px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.search input {
+    /* 搜一搜文字缩进 */
+    padding-left: 30px;
+    width: 172px;
+    height: 28px;
+}
+
+.search input::placeholder {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.search span {
+    position: absolute;
+    left: 2px;
+    top: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../image/sprites.png);
+    background-position: -79px -69px;
+}
+
+.car {
+    float: left;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 28px;
+    width: 23px;
+    height: 23px;
+    background-image: url(../image/sprites.png);
+    background-position: -119px -69px;
+}
+
+.car span {
+    /* 绝对定位具备行内块的特点不用写display */
+    position: absolute;
+    right: -13px;
+    top: -6px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* 版权区域 */
+
+.footer {
+    height: 342px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 59px;
+    padding-left: 159px;
+    height: 175px;
+    border-bottom: 1px solid #434343;
+}
+
+.footer .top li {
+    float: left;
+    position: relative;
+    margin-right: 200px;
+    width: 195px;
+    height: 58px;
+    line-height: 58px;
+}
+
+.footer .top li :last-child {
+    margin-right: 0;
+}
+
+
+/* 伪元素添加的标签是行内 */
+
+
+/* 行内块和行内文字无法通过vertical-align或行高对齐，定位 */
+
+.footer .top li::before {
+    /* content必须有 */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background-image: url(../image/sprites.png);
+    vertical-align: middle;
+}
+
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+/* 第二个li 里面的before添加背景图位置属性 */
+
+.footer .top li:nth-child(2)::before {
+    background-position: -64px 0px;
+}
+
+.footer .top li:nth-child(3)::before {
+    background-position: -129px 0px;
+}
+
+.footer .bottom {
+    font-size: 14px;
+    color: #999;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.footer .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}
